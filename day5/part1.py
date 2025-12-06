@@ -19,6 +19,7 @@ for r in ranges[1:]:
     else:
         p = stack.pop()
         stack.append((min(p[0], r[0]), max(p[1], r[1])))
+print("Total fresh IDs:", sum([r[1]-r[0]+1 for r in stack]))
 
 valid_ids = 0
 for id in ids:
